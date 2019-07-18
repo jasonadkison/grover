@@ -23,7 +23,7 @@ class Grover
     dependencies puppeteer: 'puppeteer'
 
     def self.launch_params
-      ENV['GROVER_NO_SANDBOX'] == 'true' ? "{args: ['--no-sandbox', '--disable-setuid-sandbox']}" : '{}'
+      ENV['GROVER_NO_SANDBOX'] == 'true' ? "{args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu']}" : '{}'
     end
 
     def self.convert_function(convert_action)
